@@ -1,7 +1,7 @@
 import json
 import os
 
-songList = []
+songList = {}
 
 def addSpotifyData(list):
     for dataItem in list:
@@ -24,8 +24,14 @@ for x in os.listdir('./data/'):
 
         with open(fullPath, 'r') as file:
             spotifyData = json.load(file) 
-        addSpotifyData(spotifyData)
 
-songList.sort(key=lambda e: e['plays'])
+            for item in spotifyData:
+                name = item.get('master_metadata_track_name')
 
-print(songList[0])
+                if name:
+                    songList[name] = songList.get(name, 0) + 1 
+
+# Convert to a list of tuples or dicts only when you need to sort
+sorted_songs = sorted(songList.items(), key=lambda x: x[1], reverse=False)
+
+print(sorted_songs)
