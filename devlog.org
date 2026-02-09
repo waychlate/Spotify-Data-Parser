@@ -2,12 +2,13 @@
 #+author:  Donald Khek
 
 * Long Term Project Goals
-- [ ] Create a python script that reads user's JSON files and outputs their most played song and artist with the number of minutes (basic start)
-- [ ] Create a website using flask to display the user's Spotify data in a more /human/ way
+- [X] Create a python script that reads user's JSON files and outputs their most played song and artist with the number of minutes (basic start)
+- [ ] Create a website using Streamllit to display the user's Spotify data in a more /human/ way
   - [ ] Showcase user's data using graphs possibly
   - [ ] Could take on a style similar to last.fm where it displays when you played a song
 - [ ] Experiment with Machine Learning
   - [ ] Possibly to predict the next song the user will play or if they will skip a song
+- [ ] Write a tutorial on how to use it in the README.md
 * Short Term Project Goals
 - [ ] Use spotify URIs to identify the song instead of name (More Unique)
 - [ ] Look into using pandas, esp because you have such a large database
@@ -19,5 +20,11 @@
 Today is the day the project actually begins. Honestly, the biggest hurdle today was familiarizing myself with Python after coding primarily in C++ and JS before. I was able to create a script that read all of my spotify data and listed the amount of times it was played.
 
 The only issue is that it takes a while to read all the data, so I'll have to find a better database system or experiment with a smaller sample size, probably both.
-*** Small Fix @<2026-02-06 Fri 01:27>
-Instead of using a list, I opted for dictionaries/hash maps. This made the script run much faster because it didn't have to do as much searching. Lowkey learning a lot even on this first day. 
+*** Small Fix @ <2026-02-06 Fri 01:27>
+Instead of using a list, I opted for dictionaries/hash maps. This made the script run much faster because it didn't have to do as much searching. Lowkey learning a lot even on this first day.
+** 2025-02-08: Pandas
+:PROPERTIES:
+:CREATED: <2026-02-08 Sun 23:05> 
+:END:
+Created a new script using pandas dataframes instead of python dictionaries. Also, I'm going to use streamlit instead of flask. I want to prioritize ML right now and am looking past front/backend. I do want to incorporate flask eventually and mess around with uploading user data to the cloud. 
+
