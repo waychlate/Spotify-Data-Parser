@@ -1,2 +1,3 @@
-# Spotify-Data-Parser
-Upload your spotify history and see your most listened artists, songs, and albums! 
+# Spotify-Data-Anomaly-Detector
+
+_The Goal_: Use ML to identify changes in listening habits
